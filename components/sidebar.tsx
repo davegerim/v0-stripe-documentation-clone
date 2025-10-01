@@ -1,27 +1,34 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronRight, ChevronLeft } from "lucide-react"
-import { cn } from "@/lib/utils"
-import Link from "next/link"
-import { sidebarNavigation, type NavItem } from "@/lib/navigation-data"
+import { useState } from "react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { sidebarNavigation, type NavItem } from "@/lib/navigation-data";
 
 interface SidebarProps {
-  currentPath?: string
+  currentPath?: string;
 }
 
 export function Sidebar({ currentPath = "" }: SidebarProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
-  const [expandedSections, setExpandedSections] = useState<string[]>(["Overview", "Use Payment Links"])
+  const [isExpanded, setIsExpanded] = useState(true);
+  const [expandedSections, setExpandedSections] = useState<string[]>([
+    "PAYMENT METHODS",
+    "Flutter Integration",
+  ]);
 
   const toggleSection = (section: string) => {
-    setExpandedSections((prev) => (prev.includes(section) ? prev.filter((s) => s !== section) : [...prev, section]))
-  }
+    setExpandedSections((prev) =>
+      prev.includes(section)
+        ? prev.filter((s) => s !== section)
+        : [...prev, section]
+    );
+  };
 
   const renderNavItem = (item: NavItem, level = 0) => {
-    const hasChildren = item.items && item.items.length > 0
-    const isActive = currentPath === item.href
-    const isExpanded = expandedSections.includes(item.title)
+    const hasChildren = item.items && item.items.length > 0;
+    const isActive = currentPath === item.href;
+    const isExpanded = expandedSections.includes(item.title);
 
     if (hasChildren) {
       return (
@@ -31,7 +38,12 @@ export function Sidebar({ currentPath = "" }: SidebarProps) {
             className="flex items-center justify-between w-full py-1.5 text-left font-medium hover:text-foreground"
           >
             {item.title}
-            <ChevronRight className={cn("h-4 w-4 transition-transform", isExpanded && "rotate-90")} />
+            <ChevronRight
+              className={cn(
+                "h-4 w-4 transition-transform",
+                isExpanded && "rotate-90"
+              )}
+            />
           </button>
 
           {isExpanded && (
@@ -40,7 +52,7 @@ export function Sidebar({ currentPath = "" }: SidebarProps) {
             </div>
           )}
         </div>
-      )
+      );
     }
 
     return (
@@ -49,19 +61,21 @@ export function Sidebar({ currentPath = "" }: SidebarProps) {
         href={item.href || "#"}
         className={cn(
           "block py-1.5 transition-colors",
-          isActive ? "text-primary font-medium bg-primary/5 -ml-3 pl-3" : "text-muted-foreground hover:text-foreground",
+          isActive
+            ? "text-primary font-medium bg-primary/5 -ml-3 pl-3"
+            : "text-muted-foreground hover:text-foreground"
         )}
       >
         {item.title}
       </Link>
-    )
-  }
+    );
+  };
 
   return (
     <aside
       className={cn(
         "hidden md:block sticky top-[112px] h-[calc(100vh-112px)] border-r bg-background transition-all duration-300",
-        isExpanded ? "w-64" : "w-12",
+        isExpanded ? "w-64" : "w-12"
       )}
     >
       <div className="flex flex-col h-full">
@@ -69,12 +83,42 @@ export function Sidebar({ currentPath = "" }: SidebarProps) {
           onClick={() => setIsExpanded(!isExpanded)}
           className="flex items-center justify-center h-10 border-b hover:bg-muted/50"
         >
-          {isExpanded ? <ChevronLeft className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+          {isExpanded ? (
+            <ChevronLeft className="h-4 w-4" />
+          ) : (
+            <ChevronRight className="h-4 w-4" />
+          )}
         </button>
 
-        {isExpanded && (
+        {isExpanded ? (
           <nav className="flex-1 overflow-y-auto p-4 text-sm">
-            <div className="space-y-3">{sidebarNavigation.map((item) => renderNavItem(item))}</div>
+            <div className="space-y-3">
+              {sidebarNavigation.map((item) => renderNavItem(item))}
+            </div>
+          </nav>
+        ) : (
+          <nav className="flex-1 overflow-y-auto p-2 text-sm">
+            <div className="space-y-2">
+              {sidebarNavigation.map((item) => (
+                <div
+                  key={item.title}
+                  className="flex justify-center group relative"
+                >
+                  <button
+                    onClick={() => setIsExpanded(true)}
+                    className="w-8 h-8 rounded bg-muted/50 flex items-center justify-center hover:bg-muted transition-colors"
+                  >
+                    <span className="text-xs font-bold text-muted-foreground">
+                      {item.title.charAt(0)}
+                    </span>
+                  </button>
+                  {/* Tooltip */}
+                  <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
+                    {item.title}
+                  </div>
+                </div>
+              ))}
+            </div>
           </nav>
         )}
 
@@ -92,5 +136,5 @@ export function Sidebar({ currentPath = "" }: SidebarProps) {
         )}
       </div>
     </aside>
-  )
+  );
 }

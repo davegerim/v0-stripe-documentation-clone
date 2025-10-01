@@ -63,19 +63,19 @@ export function RightSidebar({ slug }: RightSidebarProps) {
           <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">ON THIS PAGE</h3>
           <nav className="space-y-2 text-sm">
             {content.sections.map((section) => {
-              const sectionId = section.toLowerCase().replace(/\s+/g, "-")
+              const sectionId = section.id
               const isActive = activeSection === sectionId
 
               return (
                 <button
-                  key={section}
+                  key={section.id}
                   onClick={() => scrollToSection(sectionId)}
                   className={cn(
                     "block text-left w-full transition-colors",
                     isActive ? "text-primary font-medium" : "text-muted-foreground hover:text-foreground pl-3",
                   )}
                 >
-                  {section}
+                  {section.title}
                 </button>
               )
             })}
