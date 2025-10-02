@@ -255,6 +255,201 @@ export function HomeContent() {
               </div>
             </div>
 
+            {/* Laravel Integration */}
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-primary">
+                Laravel Integration
+              </h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  {
+                    title: "Hosted Payments",
+                    desc: "Redirect to YagoutPay payment page",
+                    href: "/laravel/hosted-payments",
+                  },
+                  {
+                    title: "API Integration",
+                    desc: "Direct API payment processing",
+                    href: "/laravel/api-integration",
+                  },
+                  {
+                    title: "Payment Widget",
+                    desc: "Static links and QR code generation",
+                    href: "/laravel/payment-widget",
+                  },
+                ].map((product) => (
+                  <Link key={product.href} href={product.href}>
+                    <Card className="h-full hover:border-primary transition-colors">
+                      <CardHeader>
+                        <CardTitle className="text-base">
+                          {product.title}
+                        </CardTitle>
+                        <CardDescription className="text-sm">
+                          {product.desc}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Node.js Integration */}
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-primary">
+                Node.js Integration
+              </h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  {
+                    title: "Hosted Payments",
+                    desc: "Redirect to YagoutPay payment page",
+                    href: "/nodejs/hosted-payments",
+                  },
+                  {
+                    title: "API Integration",
+                    desc: "Direct API payment processing",
+                    href: "/nodejs/api-integration",
+                  },
+                  {
+                    title: "Payment Links",
+                    desc: "Dynamic and static payment links",
+                    href: "/nodejs/payment-links",
+                  },
+                ].map((product) => (
+                  <Link key={product.href} href={product.href}>
+                    <Card className="h-full hover:border-primary transition-colors">
+                      <CardHeader>
+                        <CardTitle className="text-base">
+                          {product.title}
+                        </CardTitle>
+                        <CardDescription className="text-sm">
+                          {product.desc}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Java Integration */}
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-primary">
+                Java Integration
+              </h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  {
+                    title: "Hosted Payments",
+                    desc: "Redirect to YagoutPay payment page",
+                    href: "/java/hosted-payments",
+                  },
+                  {
+                    title: "API Integration",
+                    desc: "Direct API payment processing",
+                    href: "/java/api-integration",
+                  },
+                  {
+                    title: "Payment Links",
+                    desc: "Static link API integration",
+                    href: "/java/payment-links",
+                  },
+                ].map((product) => (
+                  <Link key={product.href} href={product.href}>
+                    <Card className="h-full hover:border-primary transition-colors">
+                      <CardHeader>
+                        <CardTitle className="text-base">
+                          {product.title}
+                        </CardTitle>
+                        <CardDescription className="text-sm">
+                          {product.desc}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* WordPress Integration */}
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-primary">
+                WordPress Integration
+              </h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  {
+                    title: "Hosted Payments",
+                    desc: "Redirect to YagoutPay payment page",
+                    href: "/wordpress/hosted-payments",
+                  },
+                  {
+                    title: "API Integration",
+                    desc: "Direct API payment processing",
+                    href: "/wordpress/api-integration",
+                  },
+                  {
+                    title: "Static Forms",
+                    desc: "Custom payment forms with full control",
+                    href: "/wordpress/static-forms",
+                  },
+                ].map((product) => (
+                  <Link key={product.href} href={product.href}>
+                    <Card className="h-full hover:border-primary transition-colors">
+                      <CardHeader>
+                        <CardTitle className="text-base">
+                          {product.title}
+                        </CardTitle>
+                        <CardDescription className="text-sm">
+                          {product.desc}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* WooCommerce Integration */}
+            <div>
+              <h3 className="text-xl font-semibold mb-6 text-primary">
+                WooCommerce Integration
+              </h3>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  {
+                    title: "Payment Gateway",
+                    desc: "Native WooCommerce payment gateway",
+                    href: "/woocommerce/payment-gateway",
+                  },
+                  {
+                    title: "Order Management",
+                    desc: "Automatic order status updates",
+                    href: "/woocommerce/order-management",
+                  },
+                  {
+                    title: "Webhook Support",
+                    desc: "Real-time payment notifications",
+                    href: "/woocommerce/webhook-support",
+                  },
+                ].map((product) => (
+                  <Link key={product.href} href={product.href}>
+                    <Card className="h-full hover:border-primary transition-colors">
+                      <CardHeader>
+                        <CardTitle className="text-base">
+                          {product.title}
+                        </CardTitle>
+                        <CardDescription className="text-sm">
+                          {product.desc}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* Code Examples */}
             <div>
               <h3 className="text-xl font-semibold mb-6 text-primary">
@@ -325,11 +520,6 @@ export function HomeContent() {
                     title: "Common Issues",
                     desc: "Frequently asked questions",
                     href: "/flutter/common-issues",
-                  },
-                  {
-                    title: "API Reference",
-                    desc: "Complete API documentation",
-                    href: "/api",
                   },
                 ].map((product) => (
                   <Link key={product.href} href={product.href}>

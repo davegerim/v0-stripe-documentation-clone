@@ -1,5 +1,3 @@
-import { Sparkles, Copy, FileText } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { getPageContent } from "@/lib/page-content"
 import { CodeBlock } from "@/components/code-block"
@@ -896,20 +894,6 @@ res.redirect(303, session.url);`}
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-balance">{content.title}</h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">{content.description}</p>
 
-        <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-6 md:mb-8">
-          <Button variant="outline" size="sm" className="gap-2 bg-transparent text-xs md:text-sm">
-            <Sparkles className="h-3 w-3 md:h-4 md:w-4" />
-            Ask about this page
-          </Button>
-          <Button variant="outline" size="sm" className="gap-2 bg-transparent text-xs md:text-sm">
-            <Copy className="h-3 w-3 md:h-4 md:w-4" />
-            Copy for LLM
-          </Button>
-          <Button variant="outline" size="sm" className="gap-2 bg-transparent text-xs md:text-sm hidden sm:flex">
-            <FileText className="h-3 w-3 md:h-4 md:w-4" />
-            View as Markdown
-          </Button>
-        </div>
 
         {renderContent()}
       </div>

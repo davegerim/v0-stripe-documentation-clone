@@ -76,14 +76,28 @@ export function MobileMenu({ currentPath = "" }: MobileMenuProps) {
           <nav className="overflow-y-auto p-4 text-sm h-[calc(100vh-80px)]">
             <div className="space-y-3">{sidebarNavigation.map((item) => renderNavItem(item))}</div>
 
+            {/* SET UP YAGOUTPAY Section */}
             <div className="border-t mt-6 pt-6 space-y-2">
-              <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                <span>🇺🇸</span>
-                <span>United States</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                <span>🌐</span>
-                <span>English (United States)</span>
+              <h3 className="text-sm font-semibold text-foreground mb-3">SET UP YAGOUTPAY</h3>
+              <div className="space-y-2">
+                <a
+                  href="https://yagoutpay.com/merchant-portal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <ChevronRight className="h-3 w-3" />
+                  Create an account
+                </a>
+                <a
+                  href="https://dashboard.yagoutpay.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <ChevronRight className="h-3 w-3" />
+                  Migrate to YagoutPay
+                </a>
               </div>
             </div>
           </nav>

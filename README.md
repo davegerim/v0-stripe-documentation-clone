@@ -1,30 +1,43 @@
-# Stripe documentation clone
+# YagoutPay Documentation
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/davegerim-gmailcoms-projects/v0-stripe-documentation-clone)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/Kw9jdvovpsX)
+Complete integration guides for YagoutPay payment processing across multiple platforms and frameworks.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+This documentation site provides comprehensive guides for integrating YagoutPay payment processing across:
 
-## Deployment
+- **Mobile Apps**: Flutter, React Native
+- **Web Applications**: JavaScript, Laravel, Node.js, Java
+- **CMS & E-commerce**: WordPress, WooCommerce
 
-Your project is live at:
+## Features
 
-**[https://vercel.com/davegerim-gmailcoms-projects/v0-stripe-documentation-clone](https://vercel.com/davegerim-gmailcoms-projects/v0-stripe-documentation-clone)**
+- 🚀 **Quick Start Guides** for all supported platforms
+- 💳 **Multiple Payment Methods** (Hosted Checkout, Direct API, Payment Links, Static Links)
+- 🔧 **Implementation Details** with code examples and encryption details
+- 📚 **Resources & Support** including video tutorials and SDK downloads
+- 🧪 **Testing Tools** with test credentials and debugging guides
 
-## Build your app
+## Getting Started
 
-Continue building your app on:
+Visit the [Get Started](/get-started) page to begin your YagoutPay integration journey.
 
-**[https://v0.app/chat/projects/Kw9jdvovpsX](https://v0.app/chat/projects/Kw9jdvovpsX)**
+## Supported Platforms
 
-## How It Works
+### Mobile Development
+- **Flutter Integration** - Complete Flutter payment integration
+- **React Native Integration** - Cross-platform mobile payments
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### Web Development
+- **JavaScript Integration** - Vanilla JS and modern frameworks
+- **Laravel Integration** - PHP framework integration
+- **Node.js Integration** - Server-side JavaScript
+- **Java Integration** - Enterprise Java applications
+
+### CMS & E-commerce
+- **WordPress Integration** - WordPress plugin development
+- **WooCommerce Integration** - E-commerce payment gateway
+
+## Development
+
+This is a Next.js application built with TypeScript and Tailwind CSS.

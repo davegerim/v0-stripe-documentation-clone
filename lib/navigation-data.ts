@@ -5,14 +5,32 @@ export interface NavItem {
 }
 
 export const mainNavigation = [
+  { 
+    title: "SDK", 
+    items: [
+      { title: "Java SDK", href: "https://drive.google.com/file/d/1NPBYr_oGrucyf2U2G32bxL752BVglnep/view?usp=drive_link" },
+      { title: "JavaScript SDK", href: "https://drive.google.com/file/d/1f0VV_wJqQIGLLyjRf5M6LSzXZdhn9_f4/view?usp=drive_link" },
+      { title: "Laravel SDK", href: "https://drive.google.com/file/d/1BMz-_h7Q8Ra-X2uQs2hzIcTv7YLLkjmG/view?usp=drive_link" },
+      { title: "WooCommerce & WordPress SDK", href: "https://drive.google.com/file/d/1-7D7w3KQkoB3iJXd6RZciaAfyNFzwiYd/view?usp=drive_link" },
+      { title: "Node.js SDK", href: "https://drive.google.com/file/d/1-rY9RzayIvDWyBiW1juyvHd8W37Z4dp6/view?usp=drive_link" },
+      { title: "Flutter SDK", href: "https://drive.google.com/file/d/11AgQN-DiHTUDj378k5-Gc0Exe7Fg_rCl/view?usp=drive_link" },
+      { title: "React Native SDK", href: "https://drive.google.com/file/d/1IYNtflStl0o-W1cDlwXK_7ZyyHHM0dCZ/view?usp=drive_link" }
+    ]
+  },
   { title: "Get started", href: "/get-started" },
   { title: "Flutter Integration", href: "/flutter" },
   { title: "React Native Integration", href: "/react-native" },
   { title: "JavaScript Integration", href: "/javascript" },
-  { title: "Payment Methods", href: "/payment-methods" },
-  { title: "API Reference", href: "/api" },
-  { title: "Testing", href: "/testing" },
-  { title: "Support", href: "/support" },
+  { title: "Laravel Integration", href: "/laravel" },
+  { title: "Node.js Integration", href: "/nodejs" },
+  { title: "Java Integration", href: "/java" },
+  { 
+    title: "WordPress", 
+    items: [
+      { title: "WordPress Integration", href: "/wordpress" },
+      { title: "WooCommerce Integration", href: "/woocommerce" }
+    ]
+  },
 ];
 
 export const sidebarNavigation: NavItem[] = [
@@ -23,6 +41,7 @@ export const sidebarNavigation: NavItem[] = [
   {
     title: "QUICK START",
     items: [
+      { title: "Integration Methods", href: "/integration-methods" },
       {
         title: "Flutter Getting Started",
         items: [
@@ -48,6 +67,51 @@ export const sidebarNavigation: NavItem[] = [
           { title: "Configuration", href: "/javascript/configuration" },
           { title: "First Payment", href: "/javascript/first-payment" },
           { title: "Testing", href: "/javascript/testing" },
+        ],
+      },
+      {
+        title: "Laravel Getting Started",
+        items: [
+          { title: "Installation", href: "/laravel/installation" },
+          { title: "Configuration", href: "/laravel/configuration" },
+          { title: "First Payment", href: "/laravel/first-payment" },
+          { title: "Testing", href: "/laravel/testing" },
+        ],
+      },
+      {
+        title: "Node.js Getting Started",
+        items: [
+          { title: "Installation", href: "/nodejs/installation" },
+          { title: "Configuration", href: "/nodejs/configuration" },
+          { title: "First Payment", href: "/nodejs/first-payment" },
+          { title: "Testing", href: "/nodejs/testing" },
+        ],
+      },
+      {
+        title: "Java Getting Started",
+        items: [
+          { title: "Installation", href: "/java/installation" },
+          { title: "Configuration", href: "/java/configuration" },
+          { title: "First Payment", href: "/java/first-payment" },
+          { title: "Testing", href: "/java/testing" },
+        ],
+      },
+      {
+        title: "WordPress Getting Started",
+        items: [
+          { title: "Installation", href: "/wordpress/installation" },
+          { title: "Configuration", href: "/wordpress/configuration" },
+          { title: "First Payment", href: "/wordpress/first-payment" },
+          { title: "Testing", href: "/wordpress/testing" },
+        ],
+      },
+      {
+        title: "WooCommerce Getting Started",
+        items: [
+          { title: "Installation", href: "/woocommerce/installation" },
+          { title: "Configuration", href: "/woocommerce/configuration" },
+          { title: "First Payment", href: "/woocommerce/first-payment" },
+          { title: "Testing", href: "/woocommerce/testing" },
         ],
       },
       {
@@ -106,54 +170,44 @@ export const sidebarNavigation: NavItem[] = [
           { title: "Security & Encryption", href: "/javascript/security" },
         ],
       },
-    ],
-  },
-  {
-    title: "CODE EXAMPLES",
-    items: [
       {
-        title: "Flutter Examples",
+        title: "Laravel Integration",
         items: [
-          {
-            title: "Complete Implementation",
-            href: "/flutter/complete-implementation",
-          },
-          {
-            title: "Configuration Examples",
-            href: "/flutter/configuration-examples",
-          },
-          { title: "WebView Examples", href: "/flutter/webview-examples" },
-          { title: "Success Screens", href: "/flutter/success-screens" },
+          { title: "Hosted Payments", href: "/laravel/hosted-payments" },
+          { title: "API Integration", href: "/laravel/api-integration" },
+          { title: "Payment Widget", href: "/laravel/payment-widget" },
         ],
       },
       {
-        title: "React Native Examples",
+        title: "Node.js Integration",
         items: [
-          {
-            title: "Complete Implementation",
-            href: "/react-native/complete-implementation",
-          },
-          {
-            title: "Configuration Examples",
-            href: "/react-native/configuration-examples",
-          },
-          { title: "WebView Examples", href: "/react-native/webview-examples" },
-          { title: "Success Screens", href: "/react-native/success-screens" },
+          { title: "Hosted Payments", href: "/nodejs/hosted-payments" },
+          { title: "API Integration", href: "/nodejs/api-integration" },
+          { title: "Payment Links", href: "/nodejs/payment-links" },
         ],
       },
       {
-        title: "JavaScript Examples",
+        title: "Java Integration",
         items: [
-          {
-            title: "Complete Implementation",
-            href: "/javascript/complete-implementation",
-          },
-          {
-            title: "Configuration Examples",
-            href: "/javascript/configuration-examples",
-          },
-          { title: "Payment Widgets", href: "/javascript/payment-widgets" },
-          { title: "Error Handling", href: "/javascript/error-handling" },
+          { title: "Hosted Payments", href: "/java/hosted-payments" },
+          { title: "API Integration", href: "/java/api-integration" },
+          { title: "Payment Links", href: "/java/payment-links" },
+        ],
+      },
+      {
+        title: "WordPress Integration",
+        items: [
+          { title: "Hosted Payments", href: "/wordpress/hosted-payments" },
+          { title: "API Integration", href: "/wordpress/api-integration" },
+          { title: "Static Forms", href: "/wordpress/static-forms" },
+        ],
+      },
+      {
+        title: "WooCommerce Integration",
+        items: [
+          { title: "Payment Gateway", href: "/woocommerce/payment-gateway" },
+          { title: "Order Management", href: "/woocommerce/order-management" },
+          { title: "Webhook Support", href: "/woocommerce/webhook-support" },
         ],
       },
     ],
@@ -162,27 +216,7 @@ export const sidebarNavigation: NavItem[] = [
     title: "TESTING",
     items: [
       { title: "Test Credentials", href: "/flutter/test-credentials" },
-      { title: "Test URLs", href: "/flutter/test-urls" },
-      { title: "Debugging", href: "/flutter/debugging" },
-      { title: "Common Issues", href: "/flutter/common-issues" },
-    ],
-  },
-  {
-    title: "TROUBLESHOOTING",
-    items: [
-      { title: "Error Codes", href: "/flutter/error-codes" },
-      { title: "Debugging Tips", href: "/flutter/debugging-tips" },
-      { title: "Performance", href: "/flutter/performance" },
-      { title: "Security", href: "/flutter/security" },
-    ],
-  },
-  {
-    title: "API REFERENCE",
-    items: [
-      { title: "Authentication", href: "/api/authentication" },
-      { title: "Endpoints", href: "/api/endpoints" },
-      { title: "Webhooks", href: "/api/webhooks" },
-      { title: "SDK Reference", href: "/api/sdk-reference" },
+      { title: "Common Issues", href: "/testing/common-issues" },
     ],
   },
 ];
@@ -208,7 +242,6 @@ export const homePageNavigation: NavItem[] = [
   {
     title: "For Developers",
     items: [
-      { title: "API Reference", href: "/api" },
       { title: "Code Examples", href: "/flutter/complete-implementation" },
       { title: "Testing Guide", href: "/flutter/testing" },
     ],

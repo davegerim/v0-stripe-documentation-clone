@@ -122,18 +122,33 @@ export function Sidebar({ currentPath = "" }: SidebarProps) {
           </nav>
         )}
 
+        {/* SET UP YAGOUTPAY Section */}
         {isExpanded && (
-          <div className="border-t p-4 space-y-2 text-sm">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <span>🇺🇸</span>
-              <span>United States</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <span>🌐</span>
-              <span>English (United States)</span>
+          <div className="border-t p-4 space-y-2">
+            <h3 className="text-sm font-semibold text-foreground mb-3">SET UP YAGOUTPAY</h3>
+            <div className="space-y-2">
+              <a
+                href="https://yagoutpay.com/merchant-portal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ChevronRight className="h-3 w-3" />
+                Create an account
+              </a>
+              <a
+                href="https://dashboard.yagoutpay.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ChevronRight className="h-3 w-3" />
+                Migrate to YagoutPay
+              </a>
             </div>
           </div>
         )}
+
       </div>
     </aside>
   );
