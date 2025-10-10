@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -12,10 +12,41 @@ interface SidebarProps {
 
 export function Sidebar({ currentPath = "" }: SidebarProps) {
   const [isExpanded, setIsExpanded] = useState(true);
-  const [expandedSections, setExpandedSections] = useState<string[]>([
-    "PAYMENT METHODS",
-    "Flutter Integration",
-  ]);
+  
+  // Determine which sections should be expanded based on current path
+  const getInitialExpandedSections = () => {
+    const sections = ["PAYMENT METHODS"];
+    
+    if (currentPath.startsWith("/flutter")) {
+      sections.push("Flutter Integration");
+    } else if (currentPath.startsWith("/react-native")) {
+      sections.push("React Native Integration");
+    } else if (currentPath.startsWith("/javascript")) {
+      sections.push("JavaScript Integration");
+    } else if (currentPath.startsWith("/laravel")) {
+      sections.push("Laravel Integration");
+    } else if (currentPath.startsWith("/nodejs")) {
+      sections.push("Node.js Integration");
+    } else if (currentPath.startsWith("/java")) {
+      sections.push("Java Integration");
+    } else if (currentPath.startsWith("/wordpress")) {
+      sections.push("WordPress Integration");
+    } else if (currentPath.startsWith("/woocommerce")) {
+      sections.push("WooCommerce Integration");
+    } else {
+      // Default to Flutter if no specific framework is detected
+      sections.push("Flutter Integration");
+    }
+    
+    return sections;
+  };
+  
+  const [expandedSections, setExpandedSections] = useState<string[]>(getInitialExpandedSections());
+
+  // Update expanded sections when currentPath changes
+  useEffect(() => {
+    setExpandedSections(getInitialExpandedSections());
+  }, [currentPath]);
 
   const toggleSection = (section: string) => {
     setExpandedSections((prev) =>

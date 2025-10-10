@@ -17,13 +17,24 @@ export const mainNavigation = [
       { title: "React Native SDK", href: "https://drive.google.com/file/d/1IYNtflStl0o-W1cDlwXK_7ZyyHHM0dCZ/view?usp=drive_link" }
     ]
   },
+  { title: "Essentials", href: "/essentials" },
   { title: "Get started", href: "/get-started" },
-  { title: "Flutter Integration", href: "/flutter" },
-  { title: "React Native Integration", href: "/react-native" },
-  { title: "JavaScript Integration", href: "/javascript" },
-  { title: "Laravel Integration", href: "/laravel" },
-  { title: "Node.js Integration", href: "/nodejs" },
-  { title: "Java Integration", href: "/java" },
+  { 
+    title: "Mobile", 
+    items: [
+      { title: "Flutter Integration", href: "/flutter" },
+      { title: "React Native Integration", href: "/react-native" }
+    ]
+  },
+  { 
+    title: "Web", 
+    items: [
+      { title: "JavaScript Integration", href: "/javascript" },
+      { title: "Laravel Integration", href: "/laravel" },
+      { title: "Node.js Integration", href: "/nodejs" },
+      { title: "Java Integration", href: "/java" }
+    ]
+  },
   { 
     title: "WordPress", 
     items: [
@@ -34,6 +45,10 @@ export const mainNavigation = [
 ];
 
 export const sidebarNavigation: NavItem[] = [
+  {
+    title: "Essentials",
+    href: "/essentials",
+  },
   {
     title: "Overview",
     href: "/get-started",
@@ -134,10 +149,6 @@ export const sidebarNavigation: NavItem[] = [
           { title: "Hosted Payments", href: "/flutter/hosted-payments" },
           { title: "API Integration", href: "/flutter/api-integration" },
           { title: "Payment Links", href: "/flutter/payment-links" },
-          {
-            title: "WebView Integration",
-            href: "/flutter/webview-integration",
-          },
         ],
       },
       {
@@ -146,10 +157,6 @@ export const sidebarNavigation: NavItem[] = [
           { title: "Hosted Payments", href: "/react-native/hosted-payments" },
           { title: "API Integration", href: "/react-native/api-integration" },
           { title: "Payment Links", href: "/react-native/payment-links" },
-          {
-            title: "WebView Integration",
-            href: "/react-native/webview-integration",
-          },
         ],
       },
       {
